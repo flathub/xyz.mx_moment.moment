@@ -781,3 +781,9 @@ modules:
     x-checker-data:
       type: "git"
       tag-pattern: "^v([\\d.]+)$"
+  - type: patch
+    path: 3504c45a476caf959735923e7296d232ba836c3f.patch
+  - type: patch
+    path: 6d246a5d9f2f93d4b3297c96301c7d0b5fbb59f4.patch
+  - type: patch
+    path: 79fa465c1aa7a1e96421881a78d216d37fa2f1a4.patch

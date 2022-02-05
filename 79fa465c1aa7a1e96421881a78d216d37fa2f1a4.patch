@@ -1,0 +1,24 @@
+From 79fa465c1aa7a1e96421881a78d216d37fa2f1a4 Mon Sep 17 00:00:00 2001
+From: Newbyte <newbie13xd@gmail.com>
+Date: Thu, 3 Feb 2022 12:34:18 +0100
+Subject: [PATCH] Add developer name to metainfo
+
+---
+ packaging/moment.metainfo.xml | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/packaging/moment.metainfo.xml b/packaging/moment.metainfo.xml
+index d2907fc5..70968169 100644
+--- a/packaging/moment.metainfo.xml
++++ b/packaging/moment.metainfo.xml
+@@ -2,6 +2,7 @@
+ <component type="desktop-application">
+   <id>xyz.mx_moment.moment</id>
+   <name>Moment</name>
++  <developer_name>Moment contributors</developer_name>
+   <summary>Customizable and keyboard-operable Matrix client</summary>
+   <description>
+     <p>A fancy, customizable, keyboard-operable Matrix chat client for encrypted and decentralized communication.</p>
+-- 
+GitLab
+
