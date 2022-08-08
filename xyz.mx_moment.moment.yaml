@@ -30,19 +30,17 @@ modules:
   buildsystem: qmake
   sources:
   - type: archive
-    url: https://github.com/thp/pyotherside/archive/1.5.9.tar.gz
-    sha256: 189cb0b973e40fcb6b95fd51b0bcd6cc8494b514d49ffe966ec488cf05bbf51e
+    url: https://github.com/thp/pyotherside/archive/1.6.0.tar.gz
+    sha256: ead71d0a549acb6664d72745fae5b1d4e433274c64be6a680ceeeef0754451ab
   - type: patch
     path: pyotherside.patch
 
 - name: olm
   buildsystem: cmake-ninja
   sources:
-  - type: git
-    url: https://gitlab.matrix.org/matrix-org/olm.git
-    tag: 3.2.2
-    commit: 3745ea57bbce319ac2f190e02062e45a46d23471
-  disable-shallow-clone: true
+  - type: archive
+    url: https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.2/olm-3.2.2.tar.gz
+    sha256: fef6402ebc8a50bb1116eaf2c4de13ae91255d11ff1a7ceeca8a97a407e310f4
   config-opts:
   - -DCMAKE_BUILD_TYPE=Release
 
@@ -58,8 +56,8 @@ modules:
   - /lib/*.la
   sources:
   - type: archive
-    url: https://mediaarea.net/download/source/libzen/0.4.37/libzen_0.4.37.tar.xz
-    sha256: 38c0a68b715b55d6685d2759eecda040adf37bd066955d79a5d01f91977bd9a0
+    url: https://mediaarea.net/download/source/libzen/0.4.39/libzen_0.4.39.tar.gz
+    sha256: bbf877062227828ccca63d36af04a16789f3f1013e0c99f6dfd908bf5f2dbe43
 
 - name: libmediainfo
   subdir: Project/GNU/Library
@@ -74,8 +72,8 @@ modules:
   - /lib/*.la
   sources:
   - type: archive
-    url: https://mediaarea.net/download/source/libmediainfo/19.09/libmediainfo_19.09.tar.xz
-    sha256: ff06e1a449dfbe6f2c51f27ae1187d3e72386cb54476fbb189ffaacf845f478e
+    url: https://mediaarea.net/download/source/libmediainfo/22.06/libmediainfo_22.06.tar.gz
+    sha256: 527a6e26d5b44665c6d8ce784d7c855a8bdc3dbb9d785fbe70f544eebbe20487
 
 - "python3-modules.json"
 
