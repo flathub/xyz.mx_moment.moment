@@ -16,7 +16,6 @@ rename-desktop-file: moment.desktop
 rename-appdata-file: moment.metainfo.xml
 cleanup:
 - /app/include
-- /app/usr/tests
 - /app/lib/cmake
 - /app/bin/cairosvg
 - /app/bin/chardetect
@@ -29,15 +28,12 @@ modules:
 
 - name: pyotherside
   buildsystem: qmake
-  make-install-args:
-  - INSTALL_ROOT=/app
-  post-install:
-  - mkdir -p /app/lib/qml
-  - ln -s /app/usr/lib/qml/io /app/lib/qml
   sources:
   - type: archive
     url: https://github.com/thp/pyotherside/archive/1.5.9.tar.gz
     sha256: 189cb0b973e40fcb6b95fd51b0bcd6cc8494b514d49ffe966ec488cf05bbf51e
+  - type: patch
+    path: pyotherside.patch
 
 - name: olm
   buildsystem: cmake-ninja
@@ -85,10 +81,6 @@ modules:
 
 - name: moment
   buildsystem: qmake
-  post-install:
-  # This works around a bug in appstream-glib where it won't find the icon if
-  # /usr exists. For some reason.
-  - ln -s /app/share /app/usr
   sources:
   - type: git
     url: https://gitlab.com/mx-moment/moment.git

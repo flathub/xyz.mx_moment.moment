@@ -1,0 +1,38 @@
+From 65fc441bf12afac45f7eb986975eee325bfb338c Mon Sep 17 00:00:00 2001
+From: bbhtt <62639087+bbhtt@users.noreply.github.com>
+Date: Mon, 8 Aug 2022 13:17:08 +0530
+Subject: [PATCH] Remove tests
+
+Don't use QT_INSTALL_QML
+---
+ pyotherside.pro | 2 +-
+ src/src.pro     | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/pyotherside.pro b/pyotherside.pro
+index 7b0ef2b..68beebf 100644
+--- a/pyotherside.pro
++++ b/pyotherside.pro
+@@ -1,5 +1,5 @@
+ TEMPLATE = subdirs
+-SUBDIRS += src tests qtquicktests
++SUBDIRS += src
+ 
+ tests.depends = src
+ 
+diff --git a/src/src.pro b/src/src.pro
+index 51ea716..5276a86 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -10,7 +10,7 @@ TEMPLATE = lib
+ CONFIG += qt plugin
+ QT += qml quick svg opengl
+ 
+-target.path = $$[QT_INSTALL_QML]/$$PLUGIN_IMPORT_PATH
++target.path = $$PREFIX/lib/qml/$$PLUGIN_IMPORT_PATH
+ INSTALLS += target
+ 
+ qmldir.files += qmldir pyotherside.qmltypes
+-- 
+2.37.1
+
