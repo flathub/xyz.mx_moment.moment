@@ -11,6 +11,7 @@ finish-args:
 - --socket=pulseaudio
 - --device=dri
 - --talk-name=org.freedesktop.Notifications
+- --talk-name=org.kde.StatusNotifierWatcher
 rename-icon: moment
 rename-desktop-file: moment.desktop
 rename-appdata-file: moment.metainfo.xml
