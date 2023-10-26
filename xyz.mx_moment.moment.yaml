@@ -40,8 +40,13 @@ modules:
   buildsystem: cmake-ninja
   sources:
   - type: archive
-    url: https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.2/olm-3.2.2.tar.gz
-    sha256: fef6402ebc8a50bb1116eaf2c4de13ae91255d11ff1a7ceeca8a97a407e310f4
+    url: https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.15/olm-3.2.15.tar.gz
+    sha256: 0c63362b8be78580c2ff862297386ceb00fb05b295ce346f6fff8be8ac49eded
+    x-checker-data:
+      type: anitya
+      project-id: 29706
+      stable-only: true
+      url-template: https://gitlab.matrix.org/matrix-org/olm/-/archive/$version/olm-$version.tar.gz
   config-opts:
   - -DCMAKE_BUILD_TYPE=Release
 
