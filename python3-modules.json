@@ -511,8 +511,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2c/4d/3ec1ea8512a7fbf57f02dee3035e2cce2d63d0e9c0ab8e4e376e01452597/lxml-4.5.2.tar.gz",
-                    "sha256": "cdc13a1682b2a6241080745b1953719e7fe0850b40a5c71ca574f090a1391df6"
+                    "url": "https://files.pythonhosted.org/packages/30/39/7305428d1c4f28282a4f5bdbef24e0f905d351f34cf351ceb131f5cddf78/lxml-4.9.3.tar.gz",
+                    "sha256": "48628bd53a426c9eb9bc066a923acaa0878d1e86129fd5359aee99285f4eed9c"
                 },
                 {
                     "type": "file",
