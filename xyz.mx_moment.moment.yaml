@@ -1,7 +1,7 @@
 id: xyz.mx_moment.moment
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '5.15-21.08'
+runtime-version: '5.15-23.08'
 command: moment
 finish-args:
 - --share=ipc
