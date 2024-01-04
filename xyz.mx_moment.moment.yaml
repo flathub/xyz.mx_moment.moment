@@ -1,96 +1,96 @@
 id: xyz.mx_moment.moment
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '5.15-21.08'
+runtime-version: 5.15-21.08
 command: moment
 finish-args:
-- --share=ipc
-- --share=network
-- --socket=fallback-x11
-- --socket=wayland
-- --socket=pulseaudio
-- --device=dri
-- --talk-name=org.freedesktop.Notifications
-- --talk-name=org.kde.StatusNotifierWatcher
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --device=dri
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.StatusNotifierWatcher
 rename-icon: moment
 rename-desktop-file: moment.desktop
 rename-appdata-file: moment.metainfo.xml
 cleanup:
-- /app/include
-- /app/lib/cmake
-- /app/bin/cairosvg
-- /app/bin/chardetect
-- /app/bin/futurize
-- /app/bin/jsonschema
-- /app/bin/pasteurize
-- /app/bin/pwiz.py
+  - /app/include
+  - /app/lib/cmake
+  - /app/bin/cairosvg
+  - /app/bin/chardetect
+  - /app/bin/futurize
+  - /app/bin/jsonschema
+  - /app/bin/pasteurize
+  - /app/bin/pwiz.py
 
 modules:
 
-- name: pyotherside
-  buildsystem: qmake
-  sources:
-  - type: archive
-    url: https://github.com/thp/pyotherside/archive/1.6.0.tar.gz
-    sha256: ead71d0a549acb6664d72745fae5b1d4e433274c64be6a680ceeeef0754451ab
-  - type: patch
-    path: pyotherside.patch
+  - name: pyotherside
+    buildsystem: qmake
+    sources:
+      - type: archive
+        url: https://github.com/thp/pyotherside/archive/1.6.0.tar.gz
+        sha256: ead71d0a549acb6664d72745fae5b1d4e433274c64be6a680ceeeef0754451ab
+      - type: patch
+        path: pyotherside.patch
 
-- name: olm
-  buildsystem: cmake-ninja
-  sources:
-  - type: archive
-    url: https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.2/olm-3.2.2.tar.gz
-    sha256: fef6402ebc8a50bb1116eaf2c4de13ae91255d11ff1a7ceeca8a97a407e310f4
-  config-opts:
-  - -DCMAKE_BUILD_TYPE=Release
+  - name: olm
+    buildsystem: cmake-ninja
+    sources:
+      - type: archive
+        url: https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.2/olm-3.2.2.tar.gz
+        sha256: fef6402ebc8a50bb1116eaf2c4de13ae91255d11ff1a7ceeca8a97a407e310f4
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
 
-- name: libzen
-  subdir: Project/GNU/Library
-  config-opts:
-  - --enable-shared
-  - --disable-static
-  cleanup:
-  - /bin
-  - /include
-  - /lib/pkgconfig
-  - /lib/*.la
-  sources:
-  - type: archive
-    url: https://mediaarea.net/download/source/libzen/0.4.39/libzen_0.4.39.tar.gz
-    sha256: bbf877062227828ccca63d36af04a16789f3f1013e0c99f6dfd908bf5f2dbe43
+  - name: libzen
+    subdir: Project/GNU/Library
+    config-opts:
+      - --enable-shared
+      - --disable-static
+    cleanup:
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - /lib/*.la
+    sources:
+      - type: archive
+        url: https://mediaarea.net/download/source/libzen/0.4.39/libzen_0.4.39.tar.gz
+        sha256: bbf877062227828ccca63d36af04a16789f3f1013e0c99f6dfd908bf5f2dbe43
 
-- name: libmediainfo
-  subdir: Project/GNU/Library
-  config-opts:
-  - --enable-shared
-  - --disable-static
-  - --with-libcurl
-  cleanup:
-  - /bin
-  - /include
-  - /lib/pkgconfig
-  - /lib/*.la
-  sources:
-  - type: archive
-    url: https://mediaarea.net/download/source/libmediainfo/22.06/libmediainfo_22.06.tar.gz
-    sha256: 527a6e26d5b44665c6d8ce784d7c855a8bdc3dbb9d785fbe70f544eebbe20487
+  - name: libmediainfo
+    subdir: Project/GNU/Library
+    config-opts:
+      - --enable-shared
+      - --disable-static
+      - --with-libcurl
+    cleanup:
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - /lib/*.la
+    sources:
+      - type: archive
+        url: https://mediaarea.net/download/source/libmediainfo/22.06/libmediainfo_22.06.tar.gz
+        sha256: 527a6e26d5b44665c6d8ce784d7c855a8bdc3dbb9d785fbe70f544eebbe20487
 
-- "python3-modules.json"
+  - python3-modules.json
 
-- name: moment
-  buildsystem: qmake
-  sources:
-  - type: git
-    url: https://gitlab.com/mx-moment/moment.git
-    tag: v0.7.3
-    commit: f3c23f0d889b7e0eda272e31e8536c4fc1e26e0e
-    x-checker-data:
-      type: "git"
-      tag-pattern: "^v([\\d.]+)$"
-  - type: patch
-    path: 3504c45a476caf959735923e7296d232ba836c3f.patch
-  - type: patch
-    path: 6d246a5d9f2f93d4b3297c96301c7d0b5fbb59f4.patch
-  - type: patch
-    path: 79fa465c1aa7a1e96421881a78d216d37fa2f1a4.patch
+  - name: moment
+    buildsystem: qmake
+    sources:
+      - type: git
+        url: https://gitlab.com/mx-moment/moment.git
+        tag: v0.7.4
+        commit: fb4501e9b3bf6fa3969b877fde06cbe2ed8df3f8
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+      - type: patch
+        path: 3504c45a476caf959735923e7296d232ba836c3f.patch
+      - type: patch
+        path: 6d246a5d9f2f93d4b3297c96301c7d0b5fbb59f4.patch
+      - type: patch
+        path: 79fa465c1aa7a1e96421881a78d216d37fa2f1a4.patch
