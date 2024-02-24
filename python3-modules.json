@@ -506,22 +506,6 @@
             ]
         },
         {
-            "name": "python3-async_generator",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"async_generator<2,>=1.10\" --no-build-isolation"
-            ],
-            "sources": []
-        },
-        {
-            "name": "python3-dataclasses",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"dataclasses>=0.6,<0.7\" --no-build-isolation"
-            ],
-            "sources": []
-        },
-        {
             "name": "python3-pyfastcopy",
             "buildsystem": "simple",
             "build-commands": [
