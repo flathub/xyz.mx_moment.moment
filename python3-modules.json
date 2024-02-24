@@ -511,7 +511,13 @@
             "build-commands": [
                 "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyfastcopy>=1.0.3,<2\" --no-build-isolation"
             ],
-            "sources": []
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/43/80/535d6b3de415e26d0a1cb774c6895dd07aa5986d2f8bde200393bd916790/pyfastcopy-1.0.3.tar.gz",
+                    "sha256": "ed4620f1087a8949888973e315d3d59fbe9b8cc4ca5df553d76d2f21d2748999"
+                }
+            ]
         }
     ]
 }
