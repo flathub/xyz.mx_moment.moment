@@ -1,0 +1,36 @@
+From 2a7b0875ef7f8c3c6f5a6df249e469e9a1265012 Mon Sep 17 00:00:00 2001
+From: Stefan Hansson <newbyte@postmarketos.org>
+Date: Sat, 24 Feb 2024 13:15:37 +0100
+Subject: [PATCH] Replace custom Purism::form_factor with display_length
+
+See https://github.com/ximion/appstream/issues/476
+---
+ packaging/moment.metainfo.xml | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/packaging/moment.metainfo.xml b/packaging/moment.metainfo.xml
+index 3694991b..eb110479 100644
+--- a/packaging/moment.metainfo.xml
++++ b/packaging/moment.metainfo.xml
+@@ -23,6 +23,9 @@
+   <provides>
+     <binary>moment</binary>
+   </provides>
++  <requires>
++    <display_length compare="ge">360</display_length>
++  </requires>
+   <project_license>LGPL-3.0-or-later</project_license>
+   <screenshots>
+     <screenshot type="default">
+@@ -74,8 +77,4 @@
+     <release version="0.4.1" date="2020-03-23"/>
+     <release version="0.4.0" date="2020-03-21"/>
+   </releases>
+-  <custom>
+-    <value key="Purism::form_factor">workstation</value>
+-    <value key="Purism::form_factor">mobile</value>
+-  </custom>
+ </component>
+-- 
+2.43.2
+

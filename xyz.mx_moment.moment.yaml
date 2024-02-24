@@ -1,7 +1,7 @@
 id: xyz.mx_moment.moment
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '5.15-21.08'
+runtime-version: '5.15-23.08'
 command: moment
 finish-args:
 - --share=ipc
@@ -40,8 +40,13 @@ modules:
   buildsystem: cmake-ninja
   sources:
   - type: archive
-    url: https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.2/olm-3.2.2.tar.gz
-    sha256: fef6402ebc8a50bb1116eaf2c4de13ae91255d11ff1a7ceeca8a97a407e310f4
+    url: https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.15/olm-3.2.15.tar.gz
+    sha256: 0c63362b8be78580c2ff862297386ceb00fb05b295ce346f6fff8be8ac49eded
+    x-checker-data:
+      type: anitya
+      project-id: 29706
+      stable-only: true
+      url-template: https://gitlab.matrix.org/matrix-org/olm/-/archive/$version/olm-$version.tar.gz
   config-opts:
   - -DCMAKE_BUILD_TYPE=Release
 
@@ -83,14 +88,10 @@ modules:
   sources:
   - type: git
     url: https://gitlab.com/mx-moment/moment.git
-    tag: v0.7.3
-    commit: f3c23f0d889b7e0eda272e31e8536c4fc1e26e0e
+    tag: v0.7.4
+    commit: fb4501e9b3bf6fa3969b877fde06cbe2ed8df3f8
     x-checker-data:
       type: "git"
       tag-pattern: "^v([\\d.]+)$"
   - type: patch
-    path: 3504c45a476caf959735923e7296d232ba836c3f.patch
-  - type: patch
-    path: 6d246a5d9f2f93d4b3297c96301c7d0b5fbb59f4.patch
-  - type: patch
-    path: 79fa465c1aa7a1e96421881a78d216d37fa2f1a4.patch
+    path: 0001-Replace-custom-Purism-form_factor-with-display_lengt.patch
