@@ -88,14 +88,10 @@ modules:
   sources:
   - type: git
     url: https://gitlab.com/mx-moment/moment.git
-    tag: v0.7.3
-    commit: f3c23f0d889b7e0eda272e31e8536c4fc1e26e0e
+    tag: v0.7.4
+    commit: fb4501e9b3bf6fa3969b877fde06cbe2ed8df3f8
     x-checker-data:
       type: "git"
       tag-pattern: "^v([\\d.]+)$"
   - type: patch
-    path: 3504c45a476caf959735923e7296d232ba836c3f.patch
-  - type: patch
-    path: 6d246a5d9f2f93d4b3297c96301c7d0b5fbb59f4.patch
-  - type: patch
-    path: 79fa465c1aa7a1e96421881a78d216d37fa2f1a4.patch
+    path: 0001-Replace-custom-Purism-form_factor-with-display_lengt.patch
