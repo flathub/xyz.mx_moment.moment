@@ -103,8 +103,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/mx-moment/moment.git
-        tag: v0.7.5
-        commit: e3ea5f8051e0fd7edcb0ac7d7c0dd41c36016976
+        tag: v0.7.6
+        commit: a727ac9db90f6c910543e1b59ad243ed521e4b37
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
