@@ -81,6 +81,21 @@ modules:
         url: https://mediaarea.net/download/source/libmediainfo/22.06/libmediainfo_22.06.tar.gz
         sha256: 527a6e26d5b44665c6d8ce784d7c855a8bdc3dbb9d785fbe70f544eebbe20487
 
+  # required for python3-pyaudio
+  - name: portaudio
+    config-opts:
+      - --disable-static
+      - --without-oss
+      - --without-jack
+    sources:
+      - type: archive
+        url: http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz
+        sha256: f5a21d7dcd6ee84397446fa1fa1a0675bb2e8a4a6dceb4305a8404698d8d1513
+    cleanup:
+      - /lib/pkgconfig
+      - /include
+      - '*.la'
+
   - python3-modules.json
 
   - name: moment
