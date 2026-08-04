@@ -1,7 +1,7 @@
 id: xyz.mx_moment.moment
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: 5.15-24.08
+runtime-version: 5.15-25.08
 command: moment
 finish-args:
   - --share=ipc
@@ -49,6 +49,7 @@ modules:
           url-template: https://gitlab.matrix.org/matrix-org/olm/-/archive/$version/olm-$version.tar.gz
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
   - name: libzen
     subdir: Project/GNU/Library
