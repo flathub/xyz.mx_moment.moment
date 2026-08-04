@@ -266,16 +266,16 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/98/d8/19483ef075d601c409bce8bcbb5c0f81a10876fff870400568f08ce484a1/watchfiles-1.2.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
-                    "sha256": "89d8c2394a065ca86f5d2910ff263ae67c127e1376ccc4f9fc35c71db879f80a",
+                    "url": "https://files.pythonhosted.org/packages/13/01/b32a967c56fb3e3e5be3db52c3d3b87fa4513aa367d8ed1ad96d42952e5f/watchfiles-1.2.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+                    "sha256": "8f70d8b291ef6e88d19b1f297a6905ddb978888d9272b0d05e6f53309856bcfc",
                     "only-arches": [
                         "aarch64"
                     ]
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ee/5a/73e2959af1b97fd5d556f9a8bdba017be23ceeef731869d5eaa0a753d5a3/watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "a711b51aec4370d0dcda5b6c09463206f133a5759341d7744b953a7b62e1100e",
+                    "url": "https://files.pythonhosted.org/packages/22/24/ed72f68cbc1333ca9b9f2200aa048bb6658ae41709bc1caad4310f4bdffd/watchfiles-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "e53a384f76b631c3ae5334ce6a52f0baa3a911eb94a4eac7f160079868b716d5",
                     "only-arches": [
                         "x86_64"
                     ]
@@ -485,8 +485,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6a/30/a727bb1420076b3c14b60911d111f0fc0449d31a1123a1ad18878a7a4e40/peewee-3.17.0.tar.gz",
-                    "sha256": "3a56967f28a43ca7a4287f4803752aeeb1a57a08dee2e839b99868181dfb5df8"
+                    "url": "https://files.pythonhosted.org/packages/04/89/76f6f1b744c8608e0d416b588b9d63c2a500ff800065ae610f7c80f532d6/peewee-3.18.2.tar.gz",
+                    "sha256": "77a54263eb61aff2ea72f63d2eeb91b140c25c1884148e28e4c0f7c4f64996a0"
                 },
                 {
                     "type": "file",
@@ -515,19 +515,19 @@
                 },
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/07/98/a41783e68a2ac040e073b0b461e0a2a11957cc4c81f00e870ba65b5fa61c/rpds_py-0.17.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+                    "sha256": "1d36b2b59e8cc6e576f8f7b671e32f2ff43153f0ad6d0201250a7c07f25d570e",
                     "only-arches": [
                         "aarch64"
-                    ],
-                    "url": "https://files.pythonhosted.org/packages/35/6a/7fc90ac9839d3ca8fd9a70e03aedaf801c47066c821a4858ef872c61f693/rpds_py-0.17.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
-                    "sha256": "071bc28c589b86bc6351a339114fb7a029f5cddbaca34103aa573eba7b482382"
+                    ]
                 },
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/7a/5a/626831fdfb80d925c652beb6e756dec6df2e92a4ee52bac59b94d2f9d7d4/rpds_py-0.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "a967dd6afda7715d911c25a6ba1517975acd8d1092b2f326718725461a3d33f9",
                     "only-arches": [
                         "x86_64"
-                    ],
-                    "url": "https://files.pythonhosted.org/packages/59/cf/63db812a31e09f37c9ff9704c13f599d5f4ffd0611e05621e5aecd142176/rpds_py-0.17.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "60e820ee1004327609b28db8307acc27f5f2e9a0b185b2064c5f23e815f248f8"
+                    ]
                 },
                 {
                     "type": "file",
