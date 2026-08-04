@@ -1,0 +1,11 @@
+--- a/olm_build.py
++++ b/olm_build.py
+@@ -33,7 +33,7 @@
+ # Try to build with cmake first, fall back to GNU make
+ try:
+     subprocess.run(
+-        ["cmake", ".", "-Bbuild", "-DBUILD_SHARED_LIBS=NO"],
++        ["cmake", ".", "-Bbuild", "-DBUILD_SHARED_LIBS=NO", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"],
+         cwd="libolm", check=True,
+     )
+     subprocess.run(
