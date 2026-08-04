@@ -1,7 +1,7 @@
 id: xyz.mx_moment.moment
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: 5.15-23.08
+runtime-version: 5.15-24.08
 command: moment
 finish-args:
   - --share=ipc
@@ -31,8 +31,8 @@ modules:
     buildsystem: qmake
     sources:
       - type: archive
-        url: https://github.com/thp/pyotherside/archive/1.6.0.tar.gz
-        sha256: ead71d0a549acb6664d72745fae5b1d4e433274c64be6a680ceeeef0754451ab
+        url: https://github.com/thp/pyotherside/archive/1.6.2.tar.gz
+        sha256: 9afe075f165c78ec584892887a6411fe1476f2115cf3bba026105bde29292a4b
       - type: patch
         path: pyotherside.patch
 
